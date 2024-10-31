@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
+import { Outlet } from 'react-router-dom'
 
 const DefaultLayout = () => {
   return (
@@ -8,7 +9,7 @@ const DefaultLayout = () => {
       <div className="wrapper d-flex flex-column min-vh-100">
         <AppHeader />
         <div className="body flex-grow-1">
-          <AppContent />
+          <Outlet />
         </div>
         <AppFooter />
       </div>
